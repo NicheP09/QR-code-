@@ -1,18 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+
+
 @import "tailwindcss";
 
+
 @theme {
-  /* ====================================
-     🎨 Color Palette
-  ==================================== */
+  --font-outfit: "Outfit", sans-serif;
+
+  /* Colors */
   --color-white: hsl(0, 0%, 100%);
   --color-slate-300: hsl(212, 45%, 89%);
   --color-slate-500: hsl(216, 15%, 48%);
   --color-slate-900: hsl(218, 44%, 22%);
-  --color-slate-100: red;
-
-  /* ====================================
-     🖋️ Typography
-  ==================================== */
-  --font-outfit: "Outfit", sans-serif;
-  --text-base: 15px;
 }
+
+body {
+  @apply bg-slate-300 flex items-center justify-center min-h-screen font-outfit;
+}
+
+@layer utilities {
+  .smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
